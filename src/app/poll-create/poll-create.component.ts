@@ -18,4 +18,8 @@ export class PollCreateComponent {
       op3: this.fb.control(''),
     });
   }
+
+  submitForm(){
+    console.log(this.pollForm.value);
+  }
 }
