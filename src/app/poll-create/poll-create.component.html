@@ -1,9 +1,9 @@
 <form [formGroup]="pollForm" (ngSubmit)="submitForm()" class="container col-sm-4">
   <div class="form-group row">
-    <label class="col-sm-2 col-form-label col-form-label-sm">
-      Question:
+    <label class="col-sm-2">
+      <kbd>Question:</kbd>
     </label>
-    <div class="col-sm-8">
+    <div class="col-sm-10">
       <input
         formControlName="question"
         type="text"
@@ -16,15 +16,15 @@
   <br>
 
   <div class="form-group row">
-    <label class="col-sm-2 col-form-label col-form-label-sm">
-      Image:
+    <label class="col-sm-2">
+      <kbd>Image:</kbd>
     </label>
-    <div class="col-sm-8">
+    <div class="col-sm-10">
       <input
       formControlName="image"
         type="text"
         class="form-control form-control-sm"
-        placeholder="URL to Image"
+        placeholder="Image URL"
       />
     </div>
   </div>
@@ -32,8 +32,8 @@
   <br>
 
   <div class="form-group row">
-    <label class="col-sm-2 col-form-label col-form-label-sm">
-      Options:
+    <label class="col-sm-2">
+      <kbd>Options:</kbd>
     </label>
     <div class="col-sm-8">
       <input
@@ -80,6 +80,6 @@
   <br>
 
   <div class="d-flex justify-content-center">
-    <button type="submit" class="btn btn-sm btn-secondary">Submit Poll</button>
+    <button type="submit" class="btn btn-success btn-sm">Submit Poll</button>
   </div>
 </form>
