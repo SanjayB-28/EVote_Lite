@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PollService } from './poll-service/poll.service';
+import { Poll, PollForm, PollVote } from './types';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +9,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showForm = false;
+  activePoll: Poll = null;
 
-  polls = [
-    {
-      question: 'Do you like Dogs or Cats?',
-      image: 'https://marvel-b1-cdn.bc0a.com/f00000000052994/www.hillspet.com/content/dam/cp-sites/hills/hills-pet/en_us/exported/pet-care/Skyword/images/basset-hound-sleeps-on-sleeping-tabby-cat_308513_ref.png',
-      votes: [0,5,7],
-      voted: true,
-    },
-    {
-      question: 'Which is the Best Season?',
-      image: 'https://c.tadst.com/gfx/900x506/four-seasons.jpg?1',
-      votes: [1,6,4],
-      voted: false,
-    },
-  ];
+  polls = this.ps.getPolls();
+
+  constructor(private ps: PollService){
+
+  }
+
+  setActivePoll(poll){
+    this.activePoll=null;
+
+    setTimeout(()=>{
+      this.activePoll = poll;
+    },100);
+  }
+
+  handlePollCreate(poll: PollForm) {
+    this.ps.createPoll(poll);
+  }
+
+  handlePollVote(pollVoted: PollVote){
+    this.ps.vote(pollVoted.id, pollVoted.vote);
+  }
 }
