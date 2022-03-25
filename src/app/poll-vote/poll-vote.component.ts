@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { AfterViewInit, Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import ApexCharts from 'apexcharts';
 import { PollVote } from '../types';
@@ -49,7 +49,7 @@ export class PollVoteComponent implements AfterViewInit {
           },
         ],
       chart: {
-        height: 350,
+        height: 480,
         type: 'bar',
       },
       plotOptions: {

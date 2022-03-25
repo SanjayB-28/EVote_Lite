@@ -14,19 +14,19 @@ export class PollService {
     return of([
       {
         id: 1,
-        question: 'Do you like Dogs or Cats?',
-        thumbnail: 'https://marvel-b1-cdn.bc0a.com/f00000000052994/www.hillspet.com/content/dam/cp-sites/hills/hills-pet/en_us/exported/pet-care/Skyword/images/basset-hound-sleeps-on-sleeping-tabby-cat_308513_ref.png',
-        results: [0,5,7],
-        options: ["Cats", "Dogs", "None"],
-        voted: true,
+        question: 'Cast your Vote for Municipal Election',
+        thumbnail: 'https://images.newindianexpress.com/uploads/user/imagelibrary/2021/4/29/w900X450/campa_pic.jpg?w=640&dpr=1.3',
+        results: [40,60,25],
+        options: ["Candidate A", "Candidate B", "Candidate C"],
+        voted: false,
       },
       {
         id: 2,
-        question: 'Which is the Best Season?',
-        thumbnail: 'https://c.tadst.com/gfx/900x506/four-seasons.jpg?1',
-        results: [1,6,4,7],
-        options: ["Summer", "Winter", "Autumn", "Spring"],
-        voted: false,
+        question: 'ABC Club Chairperson Election',
+        thumbnail: 'https://d3n8a8pro7vhmx.cloudfront.net/harveymilkclub/pages/182/attachments/original/1544666411/2018-Board-Elections-Postcard-Graphic-01.png?1544666411',
+        results: [10,12,7,14],
+        options: ["Akshay", "Deepak", "Senthil", "Rahul"],
+        voted: true,
       },
     ]).pipe(delay(2000));
   }
