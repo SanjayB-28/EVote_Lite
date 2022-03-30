@@ -8,7 +8,6 @@ import { delay } from 'rxjs/operators';
 })
 export class PollService {
 
-  constructor() { }
 
   getPolls(): Observable<Poll[]> {
     return of([
