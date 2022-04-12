@@ -13,8 +13,16 @@ export class AppComponent {
 
   polls = this.ps.getPolls();
 
-  constructor(private ps: PollService){
+  constructor(private ps: PollService){}
 
+  ngOnInit() {
+    this.ps.onEvent('PollCreated').subscribe(() => {
+      location.reload();
+    });
+
+    this.ps.onEvent('PollReacted').subscribe(() => {
+      location.reload();
+    });
   }
 
   setActivePoll(poll){
