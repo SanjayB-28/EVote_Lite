@@ -19,6 +19,7 @@ export class PollCreateComponent {
       op1: this.fb.control(''),
       op2: this.fb.control(''),
       op3: this.fb.control(''),
+      op4: this.fb.control(''),
     });
   }
 
@@ -29,7 +30,8 @@ export class PollCreateComponent {
       options: [
         this.pollForm.get('op1').value,
         this.pollForm.get('op2').value,
-        this.pollForm.get('op3').value
+        this.pollForm.get('op3').value,
+        this.pollForm.get('op4').value
       ]
     };
 
